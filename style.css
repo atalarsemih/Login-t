@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  animation: changeBackgroundColor 6s infinite alternate; /* Arka plan rengini sürekli olarak değiştiren animasyon */
+}
+
+.login-container {
+  background-color: #ffffffa5;
+  padding: 40px;
+  height: 400px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+button {
+  background-color: #1d3a1e;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  animation: pulse 1s infinite alternate;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@keyframes changeBackgroundColor {
+  0% {
+      background-color: #000000; /* Başlangıç rengi */
+  }
+  25% {
+      background-color: #000000; /* İlk geçiş rengi */
+  }
+  50% {
+      background-color: #000000; /* Orta geçiş rengi */
+  }
+  75% {
+      background-color: #212121; /* İkinci geçiş rengi */
+  }
+  100% {
+      background-color: #2a2f2b; /* Son rengi, başa dönüş */
+  }
+}
+
+
+
+/* Yıldızlar için stil */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  animation: moveStar linear infinite;
+  opacity: 0.8;
+}
+
+/* Yıldızların hareketi */
+@keyframes moveStar {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(100vw);
+  }
+}
